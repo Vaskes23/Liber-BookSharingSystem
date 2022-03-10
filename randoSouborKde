@@ -1,0 +1,113 @@
+<?php
+class DirectorsCarousell{
+    public function __construct(){
+        $this->mysql=mysqli_connect('82.208.16.182','vascakmatyas','penis','vascakmatyas_movies');
+    }
+     public function famousDirectors(){
+            
+            $sql = "SELECT * FROM directors";
+            $result = mysqli_query($this->mysql, $sql);
+            while ($rowDirectors = mysqli_fetch_array($result)){
+                                                                                                                                                //generuje carousel s rezisery podle dat v DB
+                echo"<div class='imgDivDirector'>";
+                echo"<img src='img/".$rowDirectors['image']."'>";
+                echo"<h2>".$rowDirectors['name']."</h2>";
+                echo "<p>".$rowDirectors['text']."</p>";
+
+                echo"<button  class='button_moreInfo'><a href=infoDirector.php?id=".$rowDirectors['id']."><i class='fa fa-info'></i></a></button>";
+                echo"</div>";
+            }
+        }
+
+        public function newlyAdded(){
+            $sql = "SELECT * FROM movies";
+        $result = mysqli_query($this->mysql, $sql);
+        while ($row = mysqli_fetch_array($result)){
+                                                                                                                                        //generuje carousel s filmy podle dat v DB
+            echo"<div class='imgDiv'>";
+            echo"<img src='img/".$row['image']."'>";
+            echo"<h2>".$row['name']."</h2>";
+            echo "<p>".$row['text']."</p>";
+
+            echo"<button  class='button_moreInfo'><a href=info.php?id=".$row['id']."><i class='fa fa-info'></i></a></button>";
+
+            echo"<button  class='button_moreInfo'><a href=watched.php?id=".$row['id']."><i class='fa fa-check'></i></a></button>";
+            echo"<button  class='button_moreInfo'><a href=watchlist.php?id=".$row['id']."> <i class='fa fa-bookmark'></i></a></button>";
+            echo"</div>";
+        }
+        }
+
+        function aclaimed(){
+            $sql = "SELECT * FROM movies WHERE criticScore >= 70 ";
+        $result = mysqli_query($this->mysql, $sql);
+        while ($row = mysqli_fetch_array($result)){
+                                                                                                                                        //generuje carousel s filmy podle dat v DB
+            echo"<div class='imgDiv'>";
+            echo"<img src='img/".$row['image']."'>";
+            echo"<h2>".$row['name']."</h2>";
+            echo "<p>".$row['text']."</p>";
+
+            echo"<button  class='button_moreInfo'><a href=info.php?id=".$row['id']."><i class='fa fa-info'></i></a></button>";
+
+            echo"<button  class='button_moreInfo'><a href=watched.php?id=".$row['id']."><i class='fa fa-check'></i></a></button>";
+            echo"<button  class='button_moreInfo'><a href=watchlist.php?id=".$row['id']."> <i class='fa fa-bookmark'></i></a></button>";
+            echo"</div>";
+        }
+        }
+
+        function watchAgain(){
+            $userId = $_SESSION['user_id'];
+        $sql = "SELECT * FROM watched WHERE userID = '$userId'";
+        $dbUser =  mysqli_connect('82.208.16.182','vascakmatyas','penis','vascakmatyas_users');
+        $dbMovies =  mysqli_connect('82.208.16.182','vascakmatyas','penis','vascakmatyas_movies');
+                                                                                                                                //bere nahodne cisla z poctu sloupci v tabulce aby se mohli pak vybrat 2 ruzne id filmu
+        $result = mysqli_query($dbUser, $sql);
+        while ($row1 = mysqli_fetch_array($result)) {
+            $NumberOfMovies = $row1['movNum'];
+        }
+
+        if ($_SESSION['user_logged_in'] == true && $NumberOfMovies > 1):
+                                                                                                                                    //generuje nahodne cisla ze zadanych dat
+        $rndMov1 = rand(0,$NumberOfMovies -1);
+        do {
+            $rndMov2 = rand(0,$NumberOfMovies -1);
+        } while ($rndMov1 == $rndMov2);
+
+        $result = mysqli_query($dbUser, $sql);
+        while ($row2 = mysqli_fetch_array($result)) {                                                                           //predela nahodne cisla do query kde se daji posla do databaze
+
+            $codeRandomMov1 = "movie" . $rndMov1;
+            $entireRandomMov1 = $row2[$codeRandomMov1];
+
+            $codeRandomMov2 = "movie" . $rndMov2;
+            $entireRandomMov2 = $row2[$codeRandomMov2];
+        }
+
+
+        $sql = "SELECT * FROM movies WHERE id = $entireRandomMov1 OR id = $entireRandomMov2 LIMIT 2";                           // vygeneruje nasi sekci watch it again a 2 nahodne filmy ktere jsme oznacili jako watched
+        $result = mysqli_query($dbMovies, $sql);
+        echo"<div class='watchAgain'>";
+        echo"<h2>WATCH IT AGAIN</h2>";
+        while ($row2 = mysqli_fetch_array($result)) {
+
+
+            echo "<a href=watched.php?id=".$row2['id'].">";
+            echo"<div class='watchAgainMovies'>";
+            echo "<img src='img/" . $row2['image'] . "'>";
+            echo"<div class='watchNameText'>";
+            echo "<h2>" . $row2['name'] . "</h2>";
+            echo "<p>" . $row2['text'] . "</p>";
+            echo"</div>";
+            echo"</div>";
+            echo"</a>";
+        }
+        else:
+            echo"<div class='watchAgain'>";
+            echo"<h2>WATCH IT AGAIN</h2>";
+            echo"<h1>YOU NEED TO LOGIN</h1>";
+            echo"<h1>OR ADD MOVIES TO WATCHED</h1>";
+            //echo"<div class='watchNameText'>";
+        endif;
+        echo"</div>";
+        }
+}
