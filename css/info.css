@@ -1,0 +1,775 @@
+body {
+    font-family: Nunito;
+    line-height: 1.5;
+    margin: 0;
+    background-color: #fff;
+}
+
+.content{
+    max-width: 1270px;
+    margin: auto;
+}
+
+.content h1{
+    color: #209D34;
+}
+
+.container {
+    width: 65%;
+    margin: auto;
+    overflow: hidden;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.button_1 {
+    cursor: pointer;
+    height: 38px;
+    background: none;
+    border: none;
+    padding-left: 0px;
+    padding-right: 20px;
+    color: white;
+}
+
+.button_signIn {
+    padding: 8px 32px;
+    margin-top: -5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    color: #ffffff;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: #209D34;
+    border-radius: 5px;
+    border: 2px solid #fff;
+}
+
+.button_signIn:hover{
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: #fff;
+    color: #000000;
+    border-radius: 5px;
+    border: 2px solid #fff;
+}
+
+header {
+    background: #209D34;
+    color: white;
+    padding-top: 15px;
+    min-height: 60px;
+}
+
+header a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor:pointer;
+}
+
+header li {
+    float: left;
+    display: inline;
+    padding: 0px 20px 0px 20px;
+}
+
+header #branding {
+    float: left;
+}
+
+header #branding h1 {
+    margin: 0;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header .highlight,
+header .current a {
+    font-weight: bold;
+}
+header a:hover {
+    color: #cccccc;
+}
+
+#newsletter input[type="text"] {
+    border-radius: 30px;
+    border: none;
+    padding: 5px;
+    height: 25px;
+    width: 300px;
+}
+
+#showcase {
+    min-height: 400px;
+
+    text-align: center;
+    color: white;
+}
+#showcase h1 {
+    margin-top: 100px;
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+#showcase p {
+    font-size: 20px;
+}
+
+#newsletter {
+    padding: -5px;
+    color: white;
+    background: none;
+}
+#newsletter h1 {
+    float: left;
+}
+
+#newsletter form {
+    float: right;
+    margin-top: -5px;
+
+}
+
+#newsletter input[type="search"] {
+    border-radius: 30px;
+    border: none;
+    padding: 5px;
+    height: 25px;
+    width: 300px;
+}
+
+.addMovie{
+    background-color: #EAFCEE;
+
+}
+
+.imgDiv{
+    width: 250px;
+    background-color: #209D34;
+    max-height: 551px;
+    color: white;
+}
+
+.imgDiv p{
+    margin: 10px;
+    text-align: center;
+    height: 70px;
+}
+
+.imgDiv img{
+    width: 250px;
+    height: 370px;
+}
+
+.imgDiv h2{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 1px;
+}
+
+.imgDiv button{
+    margin-left: 13%;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 2px;
+}
+
+.imgDiv a{
+    color: #209D34;
+    font-size: 30px;
+}
+
+.imgDivDirectorMovies{
+    width: 250px;
+    background-color: #209D34;
+    padding-bottom:10px;
+    margin: 20px;
+    min-height: 550px;
+    max-height: 551px;
+    color: white;
+}
+
+.imgDivDirectorMovies p{
+    margin: 10px;
+    text-align: center;
+    height: 70px;
+}
+
+.imgDivDirectorMovies img{
+    width: 250px;
+    height: 370px;
+}
+
+.imgDivDirectorMovies h2{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 1px;
+}
+
+.imgDivDirectorMovies button{
+    margin-left: 13%;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 2px;
+}
+
+.imgDivDirectorMovies a{
+    color: #209D34;
+    font-size: 30px;
+}
+
+
+.addMovie table{
+    margin:auto;
+    color: #209D34;
+}
+
+.addMovie form{
+    padding-top: 3em;
+    margin-bottom: 14em;
+    padding-bottom: 3em;
+}
+
+.addMovie input[type=text], select {
+    padding: 12px 85px;
+    margin: 40px 0;
+    display: inline-block;
+    border: 3px solid #93DEAA;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+
+.addMovie input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.addMovie input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.video{
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+    margin-bottom: 5em;
+}
+
+.mainBox{
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+
+.imgDivDirector{
+    width: 250px;
+    margin-right: 5%;
+    color: white;
+}
+
+.imgDivDirector p{
+    margin: 10px;
+    text-align: center;
+    height: 70px;
+}
+
+.imgDivDirector img{
+    width: 370px;
+    height: 370px;
+}
+
+.imgDivDirector h2{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 1px;
+}
+
+
+.imgDivDirector button{
+    margin-left: 13%;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 2px;
+}
+
+.imgDivDirector a{
+    color: #209D34;
+    font-size: 30px;
+}
+
+.informationName{
+   background-color: #209D34;
+    width: 600px;
+    min-height: 370px;
+    max-height: 371px;
+    margin-left: 8%;
+}
+
+.ratingDiv{
+    display: flex;
+}
+
+.informationName h1{
+    text-align: center;
+    font-size: 40px;
+    padding: 10px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.informationName h2{
+    color: white;
+    text-align: center;
+    margin-left: 138px;
+    margin-top: -30px;
+}
+
+.informationName h3{
+    text-align: center;
+    font-size: 40px;
+    margin-left: -95px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.informationName p{
+    text-align: left;
+    color: white;
+    margin: 30px;
+    font-size: 17px;
+}
+
+.informationName a{
+    color: #209D34;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.informationName button{
+    cursor: pointer;
+    margin-left: 23%;
+    margin-top: 0%;
+    background-color: white;
+    width: 80px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+}
+
+.informationName button:hover{
+    background-color: #93DEAA;
+}
+
+.informationText{
+    margin-top: 8em;
+    margin-bottom: 7em;
+}
+
+.boxText{
+    background-color: #93DEAA;
+    text-align: center;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding-top:7% ;
+    margin-top: 5%;
+    padding-bottom:5% ;
+
+}
+
+.boxText p{
+    margin: 10px;
+    color: #209D34;
+    font-size: 20px;
+}
+
+.mainInfo{
+    margin: 40px;
+    color:#209D34 ;
+    font-size: 205px;
+   text-align: left;
+}
+
+
+
+.trailerPrewiew{
+    margin: 0px 100px 0px 100px;
+}
+
+.trailerPrewiew iframe{
+    margin:15px;
+    text-align: center
+}
+
+.trailerPrewiew h1{
+    color: #209D34;
+}
+
+span{
+    position: absolute;
+    max-width: 1270px;
+    margin: auto;
+    top:50%;
+
+    font-size: 60px;
+    font-weight: bold;
+    color: #209D34;
+    cursor: pointer;
+    z-index: 1;
+}
+
+span:nth-of-type(2){
+    Left:98%;
+    text-align: right;
+}
+
+#carouselMovies{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    margin: 0 0 1.5rem;
+    width: 100%;
+    margin-bottom: 20%;
+}
+
+#carousel::-webkit-scrollbar{
+
+}
+
+.todayBirthday{
+    position: relative;
+}
+
+#carousel div{
+    position: relative;
+    width: 330px;
+    height: 200px;
+    left: 0;
+    text-align: center;
+    padding-top: 60px;
+    font-size: 100px;
+    font-weight: bold;
+    margin: 10px 20px;
+    color: white;
+    background: #93DEAA;
+    transtion:0.5s;
+}
+
+
+#message input[type="email"] {
+    border-radius: 5px;
+    border-color: #93DEAA;
+    padding: 5px;
+    height: 25px;
+    width: 300px;
+}
+
+
+.message{
+    border: 20px ;
+    font-family: Nunito;
+    color:#209D34;
+    background-color:#E8FFEB ;
+    padding: 280px;
+    padding-bottom: -20px;
+}
+
+.message h1{
+    text-align: center;
+    font-size: 40px;
+}
+
+.message button{
+    padding: 12px 32px;
+    margin-top: -5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    color: #ffffff;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: #209D34;
+    border-radius: 5px;
+    border: 2px solid #fff;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.message button a{
+    color: white;
+    text-decoration: none;
+}
+
+.message button:hover{
+    color:#209D34;
+    background-color: #fff;
+}
+
+#message{
+    padding-left: 35%;
+    padding-right: 25%;
+}
+
+footer {
+    padding-top: 15px;
+    min-height: 60px;
+    color: #ffffff;
+    background-color: #209D34;
+    text-align: center;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+footer li {
+
+    display: inline;
+    padding: 0px 20px 0px 20px;
+}
+
+
+
+footer #branding h1 {
+    margin: 0;
+}
+
+footer nav {
+    margin:auto;
+    margin-top: 10px;
+}
+
+footer .highlight,
+footer .current a {
+    color: #e8491d;
+    font-weight: bold;
+}
+footer a:hover {
+    color: #cccccc;
+}
+
+@media only screen and (max-width: 1160px) {
+
+
+    .button_1 {
+        cursor: pointer;
+        height: 38px;
+        background: none;
+        border: none;
+        padding-left: 0px;
+        padding-right: 20px;
+        color: white;
+    }
+
+    .button_signIn {
+        padding: 8px 32px;
+        margin-top: -5px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        color: #ffffff;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        background-color: #209D34;
+        border-radius: 5px;
+        border: 2px solid #fff;
+    }
+
+
+
+    .button_signIn:hover{
+        transition-duration: 0.4s;
+        cursor: pointer;
+        background-color: #fff;
+        color: #000000;
+        border-radius: 5px;
+        border: 2px solid #fff;
+    }
+
+    header {
+        background: #209D34;
+        color: white;
+        padding-top: 15px;
+        min-height: 200px;
+    }
+
+    header nav{
+        float: left;
+        margin-left: 20%;
+    }
+
+
+    header a {
+        color: #ffffff;
+        text-decoration: none;
+        text-transform: uppercase;
+        cursor:pointer;
+    }
+
+    .branding{
+        display: none;
+    }
+
+    header ul{
+        text-align: center;
+    }
+
+    header li {
+        float: none;
+        display: block;
+        margin-top: 5px;
+    }
+
+    #newsletter input[type="text"] {
+        border-radius: 30px;
+        border: none;
+        padding: 5px;
+        height: 15px;
+        width: 150px;
+    }
+
+    .welcomePanel{
+        display: block;
+        align-items: center;
+    }
+
+    .carousel-container{
+        display: none;
+    }
+
+    .imgDiv {
+        width: 250px;
+        background-color: #209D34;
+        max-height: 551px;
+        color: white;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(100%, 0%);
+    }
+
+    .watchAgain {
+        color: white;
+        width: 80%;
+        height: 400px;
+        max-height: 401px;
+        margin-left: 11%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        position: relative;
+        background-color: #209D34;
+    }
+    header {
+        background: #209D34;
+        color: white;
+        padding-top: 15px;
+        min-height: 250px;
+    }
+
+    .imgDivDirector{
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(80%, 0%);
+    }
+
+    .imgDivDirector img {
+        width: 300px;
+        height: 300px;
+    }
+
+
+
+    .mainBox {
+        display: block;
+    }
+
+    .video {
+        display: none;
+    }
+
+    .message {
+        padding: 80px;
+    }
+
+}
+
+@media only screen and (max-width: 620px) {
+    header {
+        background: #209D34;
+        color: white;
+        padding-top: 15px;
+        min-height: 265px;
+    }
+
+    .ratingDiv {
+        display: block;
+    }
+
+    .informationName {
+        width: 300px;
+        min-height: 370px;
+        max-height: 371px;
+        margin-left: 0%;
+    }
+
+    .boxText {
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+
+    .imgDiv {
+
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(12%, 0%);
+    }
+
+    .imgDivDirector{
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(0%, 0%);
+    }
+
+    .imgDivDirector img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .informationName h2 {
+        margin-left: 0px;
+    }
+
+    .informationName h3 {
+        margin-left: 0px;
+        margin-top: -20px;
+    }
+
+    .informationName button {
+        margin-left: 15%;
+    }
+
+    .message {
+        padding: 30px;
+    }
+}
